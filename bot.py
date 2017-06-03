@@ -250,6 +250,8 @@ def draw_grid(seed, solved):
     else:
         redsremaining += 1
     #I'm not 100% confident with the draw tools so somebody else can do them if they want
+    room.send_message("Reds have "+redsremaining+" remaining")
+    room.send_message("Blues have "+bluesremaining+" remaining")
 
     for x in xrange(GRID_WIDTH, WIDTH, GRID_WIDTH):
         draw.line([x, 0, x, HEIGHT], (0,0,0))
